@@ -1,26 +1,3 @@
-name: GitHub Actions Week 14 
-run-name: ${{ github.actor }} is testing checking for issues on week 14 lab 
-on: [push] 
-jobs:
-  checks insecure code: 
-    runs-on: ubuntu-latest 
-    env:
-      working-directory-insecure: ./insecure
-    steps:
-    - name: Check out repository code
-      uses: actions/checkout@v3
-    - run: (cd insecure && npm install)
-    - run: (cd insecure && npm audit)
-    - run: echo "Testing for insecure modules"
-
-  checks if code is mashed up:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check if code cormat is correct
-      uses: actions/checkout@v3
-    - run: (cd mashup && npm install)
-    - run: (cd mashup && npm run lint)
-    - run: echo "Doing js quality check"
 
   check quality of code:
   runs-on: ubuntu-latest
