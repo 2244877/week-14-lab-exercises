@@ -23,7 +23,7 @@ jobs:
     - run: echo "Doing js quality check"
 
   check quality of code:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Tests code
       uses: actions/checkout@v3
