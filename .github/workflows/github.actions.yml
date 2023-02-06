@@ -1,9 +1,0 @@
-
-  check quality of code:
-  runs-on: ubuntu-latest
-    steps:
-    - name: Tests code
-      uses: actions/checkout@v3
-    - run: (cd unittesting && npm install)
-    - run: (cd unittesting && npm run test)
-    - run: echo "Testing for issues"
